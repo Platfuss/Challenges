@@ -7,7 +7,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        new UserInput().Start();
+        new BinarySearchTree().Start();
         Console.ReadKey();
     }
 }
