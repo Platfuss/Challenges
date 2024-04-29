@@ -20,19 +20,17 @@ internal class TwoSum : IStartable
 
     public static Tuple<int, int> FindTwoSum(List<int> list, int sum)
     {
-        IEnumerable<IGrouping<int, (int value, int index)>> groups = list.Select((value, index) => (value, index)).GroupBy(x => x.value);
+        Dictionary<int, int[]> groups = list.Select((value, index) => (value, index)).GroupBy(x => x.value).ToDictionary(x => x.Key, x => x.Select(xs => xs.index).ToArray());
         foreach (var group in groups)
         {
-            var matchingGroup = groups.FirstOrDefault(g => g.Key == sum - group.Key);
-            if (matchingGroup != null)
+            int secondValue = sum - group.Key;
+            if (groups.TryGetValue(secondValue, out int[] indexes))
             {
-                if (matchingGroup.Key != group.Key)
-                    return new Tuple<int, int>(group.First().index, matchingGroup.First().index);
-                else if (group.Count() >= 2)
-                {
-                    var (value, index) = group.First();
-                    return new Tuple<int, int>(index, group.First(g => g.index != index).index);
-                }
+                int firstIndex = group.Value.First();
+                if (secondValue != group.Key)
+                    return new Tuple<int, int>(firstIndex, indexes.First());
+                else if (group.Value.Length >= 2)
+                    return new Tuple<int, int>(firstIndex, group.Value.First(i => i != firstIndex));
             }
         }
         return null;
