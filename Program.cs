@@ -1,4 +1,5 @@
-﻿using Challenges.TestDome;
+﻿using Challenges.Helpers;
+using Challenges.TestDome;
 using System;
 
 namespace Challenges;
@@ -7,7 +8,11 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        new MalwareAnalysis().Start();
+        IStartable startable = new BoatMovements();
+        Console.WriteLine($"Running: {startable.GetType().Name}");
+        startable.Start();
+
+        Console.WriteLine($"\r\nPress any key to continue...");
         Console.ReadKey();
     }
 }
