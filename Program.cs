@@ -7,7 +7,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        new TwoSum().Start();
+        new MalwareAnalysis().Start();
         Console.ReadKey();
     }
 }
