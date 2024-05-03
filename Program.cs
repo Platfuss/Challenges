@@ -8,7 +8,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        IStartable startable = new TrainComposition();
+        IStartable startable = new Folders();
         Console.WriteLine($"Running: {startable.GetType().Name}");
         startable.Start();
 
