@@ -8,7 +8,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        IStartable startable = new Folders();
+        IStartable startable = new Account();
         Console.WriteLine($"Running: {startable.GetType().Name}");
         startable.Start();
 

@@ -1,10 +1,10 @@
 ﻿namespace Challenges.TestDome;
 
-public class Account
+public class AccountToTest
 {
     public double Balance { get; private set; }
     public double OverdraftLimit { get; private set; }
-    public Account(double overdraftLimit)
+    public AccountToTest(double overdraftLimit)
     {
         this.OverdraftLimit = overdraftLimit > 0 ? overdraftLimit : 0;
         this.Balance = 0;
