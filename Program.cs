@@ -8,7 +8,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        IStartable startable = new RoutePlanner();
+        IStartable startable = new DecoratorStream();
         Console.WriteLine($"Running: {startable.GetType().Name}");
         startable.Start();
 
