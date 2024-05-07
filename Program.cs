@@ -1,5 +1,5 @@
-﻿using Challenges.Helpers;
-using Challenges.TestDome;
+﻿using Challenges.Codewars.Kyu3;
+using Challenges.Helpers;
 using System;
 
 namespace Challenges;
@@ -8,7 +8,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        IStartable startable = new SortedSearch();
+        IStartable startable = new BinomialExpansion();
         Console.WriteLine($"Running: {startable.GetType().Name}");
         startable.Start();
 
