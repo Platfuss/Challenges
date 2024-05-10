@@ -8,7 +8,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        IStartable startable = new Bagels();
+        IStartable startable = new CatchingCarMileageNumbers();
         Console.WriteLine($"Running: {startable.GetType().Name}");
         startable.Start();
 
