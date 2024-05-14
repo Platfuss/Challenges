@@ -1,4 +1,4 @@
-﻿using Challenges.Codewars.Kyu3;
+﻿using Challenges.Codewars.Keyu7;
 using Challenges.Helpers;
 using System;
 
@@ -8,7 +8,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        IStartable startable = new PrimeStreaming();
+        IStartable startable = new CheckExam();
         Console.WriteLine($"Running: {startable.GetType().Name}");
         startable.Start();
 
