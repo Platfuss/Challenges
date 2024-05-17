@@ -1,4 +1,4 @@
-﻿using Challenges.Codewars.Kyu5;
+﻿using Challenges.Codewars.Kyu6;
 using Challenges.Helpers;
 using System;
 
@@ -8,7 +8,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        IStartable startable = new GreedIsGood();
+        IStartable startable = new DetectPangram();
         Console.WriteLine($"Running: {startable.GetType().Name}");
         startable.Start();
 
