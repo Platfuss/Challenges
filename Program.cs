@@ -8,7 +8,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        IStartable startable = new SortTheOdd();
+        IStartable startable = new FactiorialTrailingZeros();
         Console.WriteLine($"Running: {startable.GetType().Name}");
         startable.Start();
 
